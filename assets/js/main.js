@@ -37,16 +37,23 @@ const projects = [
     }
 ];
 
-// Initialize on DOM Load
-document.addEventListener('DOMContentLoaded', () => {
-    initializeNavigation();
-    populateProjects();
-    initializeAnimations();
-    initializeAIChat();
-    initializeScrollAnimations();
-    initializeSkillBars();
-    initializeProjectCards();
-});
+// Handle loading screen
+function handleLoadingScreen() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (!loadingScreen) return;
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            // Start animations after loading
+            document.querySelectorAll('.reveal').forEach(el => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 300);
+            });
+        }, 1000);
+    });
+}
 
 // Navigation
 function initializeNavigation() {
@@ -70,6 +77,28 @@ function initializeNavigation() {
             }
         });
     });
+}
+
+// Mobile menu functionality
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking nav items
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 }
 
 // Projects
@@ -232,3 +261,16 @@ function simulateAIResponse(question) {
         chatInterface.appendChild(messageEl);
     }, 1000);
 }
+
+// Initialize on DOM Load
+document.addEventListener('DOMContentLoaded', () => {
+    initializeNavigation();
+    populateProjects();
+    initializeAnimations();
+    initializeAIChat();
+    initializeScrollAnimations();
+    initializeSkillBars();
+    initializeProjectCards();
+    handleLoadingScreen();
+    initializeMobileMenu();
+});

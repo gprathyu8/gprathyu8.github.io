@@ -1,0 +1,16 @@
+{
+    "name": "Prathyusha Gaddalay - Senior Technical Product Manager",
+    "short_name": "PG Portfolio",
+    "description": "Senior Technical Product Manager with 10+ years experience in AI, Cybersecurity & Growth",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#00f5ff",
+    "icons": [
+        {
+            "src": "assets/icons/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ]
+}
