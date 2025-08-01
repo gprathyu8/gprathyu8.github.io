@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prathyusha Gaddalay | Senior Technical Product Manager Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prathyusha Gaddalay | Senior Technical Product Manager</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
   <!-- Swiper -->
@@ -13,115 +13,234 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; scroll-behavior: smooth; }
-    .navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .nav-link { color: #333 !important; }
-    .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 120px 0; text-align: center; position: relative; }
-    .hero img { border-radius: 50%; width: 180px; height: 180px; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-    .hero::after { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: url('assets/images/hero-bg.jpg') center/cover no-repeat; opacity: 0.15; }
-    .social-icons a { color: #fff; margin: 0 .5rem; font-size: 1.5rem; }
-    .section-title { margin: 60px 0 30px; text-align: center; font-size: 2.5rem; font-weight: 600; }
-    .timeline { position: relative; padding: 2rem 0; }
-    .timeline::before { content: ''; position: absolute; left:50%; top:0; bottom:0; width:4px; background:#2c5364; transform:translateX(-50%); }
-    .timeline-item { position: relative; width:50%; padding:1rem 2rem; }
-    .timeline-item:nth-child(odd) { left:0; text-align:right; }
-    .timeline-item:nth-child(even) { left:50%; }
-    .timeline-item::before { content:''; position:absolute; top:1.5rem; width:20px; height:20px; background:#2c5364; border-radius:50%; border:4px solid #fff; }
-    .timeline-item:nth-child(odd)::before { right:-10px; }
-    .timeline-item:nth-child(even)::before { left:-10px; }
-    .project-card { position: relative; overflow: hidden; border-radius:10px; }
-    .project-card img { width:100%; display:block; }
-    .project-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); color: #fff; display:flex; flex-direction:column; justify-content:center; align-items:center; opacity:0; transition:opacity .3s; }
-    .project-card:hover .project-overlay { opacity:1; }
-    .glass-card { background: rgba(255,255,255,0.3); backdrop-filter: blur(10px); padding:2rem; border-radius:10px; margin:2rem 0; }
-    footer { background:#2c5364; color:#fff; padding:2rem 0; text-align:center; }
-    .icon-list i { color:#2c5364; margin-right:.5rem; }
-    .resume-section { background: #ffffff; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-    .resume-section h3 { margin-top: 2rem; font-weight: 600; font-size: 1.8rem; }
-    .resume-section ul { list-style: disc; padding-left: 1.5rem; }
-    .resume-section p { margin: 0.5rem 0; }
+    :root { --primary: #203a43; --accent: #2c5364; --light-bg: #f9f9f9; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--light-bg); color: #333; }
+    .navbar { background: var(--primary); }
+    .nav-link, .navbar-brand { color: #fff !important; }
+    .hero { background: #fff; padding: 6rem 0; text-align: center; margin-top: 56px; }
+    .hero img { border-radius: 50%; width: 180px; height: 180px; }
+    .section-title { margin: 4rem 0 2rem; font-size: 2.25rem; text-align: center; color: var(--primary); }
+    .timeline-item img { width: 48px; margin-right: 12px; vertical-align: middle; }
+    .project-card img { height: 200px; object-fit: cover; }
+    .glass-card { background: rgba(255,255,255,0.5); backdrop-filter: blur(8px); padding:2rem; border-radius:8px; }
+    footer { background: var(--primary); color: #fff; padding:2rem 0; }
+    .btn-hire { background: var(--accent); color: #fff; }
+    .icon-list i { color: var(--accent); margin-right: .5rem; }
+    a { text-decoration: none; }
   </style>
 </head>
 <body>
-  <header class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">PG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" data-aos="fade-up">
     <img src="assets/images/profile.jpg" alt="Prathyusha Gaddalay">
     <h1 class="mt-3">Prathyusha Prakash Gaddalay</h1>
-    <p class="lead">Senior Technical Product Manager | AI-Driven SaaS & Data Platforms</p>
-    <div class="social-icons mt-3">
-      <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" download><i class="fas fa-file-download"></i></a>
+    <p class="lead">Senior Technical Product Manager: Driving Product Vision, API-driven SaaS & Data Products</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:gprathyu8@gmail.com">gprathyu8@gmail.com</a>
+      &nbsp;|&nbsp;
+      <i class="fas fa-phone"></i> <a href="tel:+918861303296">+91-8861303296</a>
+    </p>
+    <div class="my-3">
+      <a href="https://docs.google.com/forms/d/e/your-google-form-id" class="btn btn-hire me-2">Hire Me</a>
+      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" class="btn btn-outline-secondary me-2" download><i class="fas fa-download"></i> Resume</a>
+      <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" class="btn btn-outline-primary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
-  </header>
-  <section id="experience" class="container timeline mt-5">
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="container" data-aos="fade-right">
     <h2 class="section-title">Work Experience</h2>
-    <div class="timeline-item" data-aos="fade-right">
-      <h5><img src="assets/images/companies/oracle-logo.png" alt="Oracle" style="height:24px; margin-right:8px;"> Oracle – Senior Technical Product Manager</h5>
-      <small>Nov 2021 – Jun 2023</small>
-      <ul>
-        <li>Owned workflows for 5M+ users, reduced upload times 50%</li>
-        <li>Introduced microservices migration & real-time tracking</li>
-      </ul>
-    </div>
-    <div class="timeline-item" data-aos="fade-left">
-      <h5><img src="assets/images/companies/TheMathCompany_Co_dx.jpg" alt="TheMathCompany" style="height:24px; margin-right:8px;"> TheMathCompany – Product Manager</h5>
-      <small>Nov 2020 – Nov 2021</small>
-      <ul><li>Led Co.dx platform, boosted market share 20%</li></ul>
-    </div>
-    <div class="timeline-item" data-aos="fade-right">
-      <h5><img src="assets/images/companies/Sg-logo.png" alt="Scientific Games" style="height:24px; margin-right:8px;"> Scientific Games – Product Owner</h5>
-      <small>Dec 2017 – Aug 2020</small>
-      <ul><li>Launched SGHOST & Unified Wallet; $2M uplift, 20% faster transactions</li></ul>
-    </div>
-    <div class="timeline-item" data-aos="fade-left">
-      <h5><img src="assets/images/companies/Mahindra-Comviva-Logo.jpg" alt="Comviva" style="height:24px; margin-right:8px;"> Mahindra Comviva – Sr. Business Analyst</h5>
-      <small>Jul 2013 – Aug 2017</small>
-      <ul><li>Automated testing saving 80+ hours; launched KPI tool</li></ul>
+    <div class="row">
+      <!-- Oracle -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <img src="assets/images/companies/oracle-logo.png" alt="Oracle">
+          <div>
+            <h5>Oracle<br><small>Senior Technical Product Manager (2021–2023)</small></h5>
+          </div>
+        </div>
+        <ul>
+          <li>Owned workflows for 5M+ users; reduced upload times by 50%</li>
+          <li>Led microservices migration & real-time tracking</li>
+        </ul>
+      </div>
+      <!-- TheMathCompany -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <img src="assets/images/companies/TheMathCompany_Co_dx.jpg" alt="TheMathCompany">
+          <div>
+            <h5>TheMathCompany<br><small>Product Manager (2020–2021)</small></h5>
+          </div>
+        </div>
+        <ul>
+          <li>Led Co.dx platform; boosted market share by 20%</li>
+        </ul>
+      </div>
+      <!-- Scientific Games -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <img src="assets/images/companies/Sg-logo.png" alt="Scientific Games">
+          <div>
+            <h5>Scientific Games<br><small>Product Owner (2017–2020)</small></h5>
+          </div>
+        </div>
+        <ul>
+          <li>Launched SGHOST & Unified Wallet; generated $2M revenue</li>
+        </ul>
+      </div>
+      <!-- Comviva -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <img src="assets/images/companies/Mahindra-Comviva-Logo.jpg" alt="Comviva">
+          <div>
+            <h5>Mahindra Comviva<br><small>Sr. Business Analyst (2013–2017)</small></h5>
+          </div>
+        </div>
+        <ul>
+          <li>Automated testing saving 80+ hours; launched KPI tool</li>
+        </ul>
+      </div>
     </div>
   </section>
-  <section id="resume" class="container resume-section mt-5" data-aos="fade-up">
-    <h2 class="section-title">Extended Resume Snapshot</h2>
-    <h3>Proof of Work @ GrowthX</h3>
+
+  <!-- Projects -->
+  <section id="projects" class="container" data-aos="fade-up">
+    <h2 class="section-title">Projects (Last 2 Years)</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/projects/credit-scoring.png" alt="Credit Scoring">
+          <div class="project-overlay p-3">
+            <h5>AI Credit Scoring</h5>
+            <p>Improved approval accuracy by 15%</p>
+            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/projects/ai-copilot.png" alt="AI Copilot">
+          <div class="project-overlay p-3">
+            <h5>AI Copilot for PMs</h5>
+            <p>Automated backlog with GitHub Actions</p>
+            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/projects/growthx-acquisition.png" alt="GrowthX Projects">
+          <div class="project-overlay p-3">
+            <h5>GrowthX Case Studies</h5>
+            <p>Acquisition, Onboarding, Engagement, Monetization</p>
+            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section id="articles" class="container glass-card" data-aos="fade-up">
+    <h2 class="section-title">Content & Articles</h2>
     <ul>
-      <li>Runner-up at GX22 Demo Day (Top 2 of 200+ participants)</li>
-      <li>Scaled Canva’s B2B India revenue from $15M to $30M</li>
-      <li>Conducted 100+ user interviews, presented to 600+ stakeholders</li>
-    </ul>
-    <h3>Oracle – Senior Technical Product Manager</h3>
-    <ul>
-      <li>Boosted revenue 5x, reduced upload time 50%, 40% fewer system errors</li>
-      <li>Built ingestion pipelines, indexing across 5M+ users</li>
-      <li>Led global agile sprints, transitioned to microservices</li>
-    </ul>
-    <h3>TheMathCompany – Product Manager</h3>
-    <ul>
-      <li>Led Co.dx platform targeting retail, pharma, manufacturing</li>
-      <li>Achieved 8% lead conversion growth and 20% market share gain</li>
-    </ul>
-    <h3>Scientific Games – Product Owner</h3>
-    <ul>
-      <li>Launched SGHOST and Unified Wallet; $2M new revenue</li>
-      <li>Enhanced cashless payments; increased market share by 15%</li>
-    </ul>
-    <h3>Mahindra Comviva – Sr. Business Analyst</h3>
-    <ul>
-      <li>Automated testing saving 80+ hours; launched COS360 KPI tool</li>
-      <li>Improved product delivery, 10% better RFP win rates</li>
-    </ul>
-    <h3>Education & Certifications</h3>
-    <p>B.E. in Electronics & Communication – RVCE, Bengaluru (2013)</p>
-    <ul>
-      <li>CSPO® | AI Product Management | Delft Design | HubSpot PMM | ISC2 Cybersecurity</li>
-      <li>Upskilling: GrowthX GTM, AI Agents, Growth Modelling, Cloud, Low-code</li>
+      <li><a href="https://www.linkedin.com/posts/...2zWg" target="_blank">Great India AI Summit Recap</a></li>
+      <li><a href="https://www.linkedin.com/posts/...K2_d" target="_blank">FTX25 & Razorpay Thoughts</a></li>
     </ul>
   </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container" data-aos="fade-up">
+    <h2 class="section-title">Skills</h2>
+    <ul class="icon-list">
+      <li><i class="fas fa-chart-line"></i> Growth Metrics & Analytics</li>
+      <li><i class="fas fa-cogs"></i> API Integration & Architecture</li>
+      <li><i class="fas fa-project-diagram"></i> Agile Development & Roadmaps</li>
+      <li><i class="fas fa-flask"></i> A/B Testing & Experimentation</li>
+      <li><i class="fas fa-pencil-ruler"></i> UX/UI Design & Wireframing</li>
+      <li><i class="fab fa-figma"></i> Figma & Design Tools</li>
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="container glass-card" data-aos="fade-up">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="icon-list">
+      <li><i class="fas fa-award"></i> CSPO®</li>
+      <li><i class="fas fa-robot"></i> AI Product Management</li>
+      <li><i class="fas fa-tags"></i> HubSpot Product Marketing</li>
+      <li><i class="fas fa-shield-alt"></i> ISC2 Cybersecurity</li>
+      <li><i class="fas fa-lightbulb"></i> Delft Design Approach</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container" data-aos="fade-up">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="swiper testimonial-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">“She is a great team player...” – Prateek Gupta</div>
+        <div class="swiper-slide">“Always professional...” – Shahzar Ansari</div>
+        <!-- add remaining slides -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container glass-card mb-5" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</n2>
+    <form action="https://docs.google.com/forms/d/e/your-google-form-id/formResponse" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="entry.123456" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="entry.654321" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="entry.112233" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>📍 Bengaluru, India | Built by Prathyusha Gaddalay</p>
+    <div class="container text-center">
+      <p>© 2025 Prathyusha Gaddalay. All rights reserved.</p>
+    </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 600, once: true });
+    new Swiper('.testimonial-slider', { loop: true, pagination: { el: '.swiper-pagination', clickable: true }, slidesPerView: 1, spaceBetween: 20, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
   </script>
 </body>
 </html>
