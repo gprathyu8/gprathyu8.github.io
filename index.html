@@ -2,31 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prathyusha Gaddalay | Senior Technical Product Manager</title>
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    :root { --primary: #203a43; --accent: #2c5364; --light-bg: #f9f9f9; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--light-bg); color: #333; }
-    .navbar { background: var(--primary); }
-    .nav-link, .navbar-brand { color: #fff !important; }
-    .hero { background: #fff; padding: 6rem 0; text-align: center; margin-top: 56px; }
-    .hero img { border-radius: 50%; width: 180px; height: 180px; }
-    .section-title { margin: 4rem 0 2rem; font-size: 2.25rem; text-align: center; color: var(--primary); }
-    .timeline-item img { width: 48px; margin-right: 12px; vertical-align: middle; }
-    .project-card img { height: 200px; object-fit: cover; }
-    .glass-card { background: rgba(255,255,255,0.5); backdrop-filter: blur(8px); padding:2rem; border-radius:8px; }
-    footer { background: var(--primary); color: #fff; padding:2rem 0; }
-    .btn-hire { background: var(--accent); color: #fff; }
-    .icon-list i { color: var(--accent); margin-right: .5rem; }
-    a { text-decoration: none; }
+    :root { --dark: #203a43; --accent: #2c5364; --light: #f9f9f9; --text: #333; --white: #fff; }
+    body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: var(--light); scroll-behavior: smooth; }
+    nav { background: var(--dark); }
+    .nav-link, .navbar-brand { color: var(--white) !important; }
+    .metrics-bar { position: sticky; top: 56px; background: var(--accent); color: var(--white); padding: .5rem; text-align: center; z-index: 1020; }
+    .hero { padding: 6rem 0; text-align: center; background: var(--white); }
+    .hero img { border-radius: 50%; width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--accent); }
+    .section-title { margin: 4rem 0 2rem; text-align: center; font-size: 2.5rem; color: var(--dark); }
+    .timeline-item img { width: 48px; margin-right: .75rem; }
+    .project-card { border-radius: .5rem; overflow: hidden; }
+    .project-card img { height: 200px; width: 100%; object-fit: cover; }
+    .glass { background: rgba(255,255,255,0.5); backdrop-filter: blur(8px); padding: 2rem; border-radius: .5rem; }
+    footer { background: var(--dark); color: var(--white); padding: 2rem 0; }
   </style>
 </head>
 <body>
@@ -52,19 +51,24 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Metrics Bar -->
+  <div class="metrics-bar">
+    <span class="mx-3">10+ Years Experience</span> | 
+    <span class="mx-3">5M+ Users Impacted</span> | 
+    <span class="mx-3">20+ Products Delivered</span>
+  </div>
+
+  <!-- Hero -->
   <section id="home" class="hero" data-aos="fade-up">
-    <img src="assets/images/profile.jpg" alt="Prathyusha Gaddalay">
+    <img src="assets/images/profile.jpg" alt="Profile">
     <h1 class="mt-3">Prathyusha Prakash Gaddalay</h1>
-    <p class="lead">Senior Technical Product Manager: Driving Product Vision, API-driven SaaS & Data Products</p>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:gprathyu8@gmail.com">gprathyu8@gmail.com</a>
-      &nbsp;|&nbsp;
-      <i class="fas fa-phone"></i> <a href="tel:+918861303296">+91-8861303296</a>
-    </p>
-    <div class="my-3">
-      <a href="https://docs.google.com/forms/d/e/your-google-form-id" class="btn btn-hire me-2">Hire Me</a>
-      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" class="btn btn-outline-secondary me-2" download><i class="fas fa-download"></i> Resume</a>
-      <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" class="btn btn-outline-primary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <p class="lead">Senior Technical Product Manager | AI-driven SaaS & Growth Strategist</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:gprathyu8@gmail.com">gprathyu8@gmail.com</a> &nbsp;|&nbsp; 
+       <i class="fas fa-phone"></i> <a href="tel:+918861303296">+91-8861303296</a></p>
+    <div class="mt-3">
+      <a href="#contact" class="btn btn-accent me-2">Hire Me</a>
+      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" class="btn btn-outline-primary me-2" download>Download Resume</a>
+      <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" class="btn btn-outline-secondary" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
@@ -73,52 +77,59 @@
     <h2 class="section-title">Work Experience</h2>
     <div class="row">
       <!-- Oracle -->
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-center">
+      <div class="col-lg-6 mb-4">
+        <div class="d-flex align-items-center mb-2">
           <img src="assets/images/companies/oracle-logo.png" alt="Oracle">
           <div>
-            <h5>Oracle<br><small>Senior Technical Product Manager (2021–2023)</small></h5>
+            <h5>Oracle</h5>
+            <small>Senior Technical PM (2021–2023)</small>
           </div>
         </div>
         <ul>
-          <li>Owned workflows for 5M+ users; reduced upload times by 50%</li>
-          <li>Led microservices migration & real-time tracking</li>
+          <li>Managed document module for 5M+ users, cut upload times by 50%</li>
+          <li>Led microservices migration and real-time tracking features</li>
         </ul>
       </div>
       <!-- TheMathCompany -->
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-center">
+      <div class="col-lg-6 mb-4">
+        <div class="d-flex align-items-center mb-2">
           <img src="assets/images/companies/TheMathCompany_Co_dx.jpg" alt="TheMathCompany">
           <div>
-            <h5>TheMathCompany<br><small>Product Manager (2020–2021)</small></h5>
+            <h5>TheMathCompany</h5>
+            <small>Product Manager (2020–2021)</small>
           </div>
         </div>
         <ul>
-          <li>Led Co.dx platform; boosted market share by 20%</li>
+          <li>Built Co.dx platform, drove 20% market share growth</li>
+          <li>Achieved 8% increase in lead conversions</li>
         </ul>
       </div>
-      <!-- Scientific Games -->
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-center">
+      <!-- SG -->
+      <div class="col-lg-6 mb-4">
+        <div class="d-flex align-items-center mb-2">
           <img src="assets/images/companies/Sg-logo.png" alt="Scientific Games">
           <div>
-            <h5>Scientific Games<br><small>Product Owner (2017–2020)</small></h5>
+            <h5>Scientific Games</h5>
+            <small>Product Owner (2017–2020)</small>
           </div>
         </div>
         <ul>
-          <li>Launched SGHOST & Unified Wallet; generated $2M revenue</li>
+          <li>Launched SGHOST & Unified Wallet, +$2M revenue</li>
+          <li>Enhanced transaction speed by 20%</li>
         </ul>
       </div>
       <!-- Comviva -->
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-center">
+      <div class="col-lg-6 mb-4">
+        <div class="d-flex align-items-center mb-2">
           <img src="assets/images/companies/Mahindra-Comviva-Logo.jpg" alt="Comviva">
           <div>
-            <h5>Mahindra Comviva<br><small>Sr. Business Analyst (2013–2017)</small></h5>
+            <h5>Mahindra Comviva</h5>
+            <small>Sr. Business Analyst (2013–2017)</small>
           </div>
         </div>
         <ul>
-          <li>Automated testing saving 80+ hours; launched KPI tool</li>
+          <li>Automated testing, saved 80+ hours</li>
+          <li>Launched KPI tool, improved RFP win rates by 10%</li>
         </ul>
       </div>
     </div>
@@ -126,35 +137,32 @@
 
   <!-- Projects -->
   <section id="projects" class="container" data-aos="fade-up">
-    <h2 class="section-title">Projects (Last 2 Years)</h2>
+    <h2 class="section-title">Recent Projects</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="project-card">
+        <div class="project-card position-relative">
           <img src="assets/images/projects/credit-scoring.png" alt="Credit Scoring">
-          <div class="project-overlay p-3">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center project-overlay">
             <h5>AI Credit Scoring</h5>
-            <p>Improved approval accuracy by 15%</p>
-            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+            <a href="#" class="btn btn-sm btn-light mt-2">View</a>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="project-card">
+        <div class="project-card position-relative">
           <img src="assets/images/projects/ai-copilot.png" alt="AI Copilot">
-          <div class="project-overlay p-3">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center project-overlay">
             <h5>AI Copilot for PMs</h5>
-            <p>Automated backlog with GitHub Actions</p>
-            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+            <a href="#" class="btn btn-sm btn-light mt-2">View</a>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="project-card">
-          <img src="assets/images/projects/growthx-acquisition.png" alt="GrowthX Projects">
-          <div class="project-overlay p-3">
+        <div class="project-card position-relative">
+          <img src="assets/images/projects/growthx-acquisition.png" alt="GrowthX Case Studies">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center project-overlay">
             <h5>GrowthX Case Studies</h5>
-            <p>Acquisition, Onboarding, Engagement, Monetization</p>
-            <a href="#" class="btn btn-sm btn-primary" target="_blank">View</a>
+            <a href="#" class="btn btn-sm btn-light mt-2">View</a>
           </div>
         </div>
       </div>
@@ -162,76 +170,74 @@
   </section>
 
   <!-- Articles -->
-  <section id="articles" class="container glass-card" data-aos="fade-up">
-    <h2 class="section-title">Content & Articles</h2>
+  <section id="articles" class="container glass" data-aos="fade-up">
+    <h2 class="section-title">Thought Leadership</n2>
     <ul>
       <li><a href="https://www.linkedin.com/posts/...2zWg" target="_blank">Great India AI Summit Recap</a></li>
       <li><a href="https://www.linkedin.com/posts/...K2_d" target="_blank">FTX25 & Razorpay Thoughts</a></li>
     </ul>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills & Certifications -->
   <section id="skills" class="container" data-aos="fade-up">
-    <h2 class="section-title">Skills</h2>
-    <ul class="icon-list">
-      <li><i class="fas fa-chart-line"></i> Growth Metrics & Analytics</li>
-      <li><i class="fas fa-cogs"></i> API Integration & Architecture</li>
-      <li><i class="fas fa-project-diagram"></i> Agile Development & Roadmaps</li>
-      <li><i class="fas fa-flask"></i> A/B Testing & Experimentation</li>
-      <li><i class="fas fa-pencil-ruler"></i> UX/UI Design & Wireframing</li>
-      <li><i class="fab fa-figma"></i> Figma & Design Tools</li>
+    <h2 class="section-title">Skills & Tools</h2>
+    <ul class="icon-list row">
+      <li class="col-md-6"><i class="fas fa-chart-line"></i> Growth Metrics & Analytics</li>
+      <li class="col-md-6"><i class="fas fa-cogs"></i> API Integration & Architecture</li>
+      <li class="col-md-6"><i class="fas fa-project-diagram"></i> Agile Planning & Roadmaps</li>
+      <li class="col-md-6"><i class="fas fa-flask"></i> A/B Testing & Experimentation</li>
+      <li class="col-md-6"><i class="fas fa-pencil-ruler"></i> UX/UI Design & Wireframing</li>
+      <li class="col-md-6"><i class="fab fa-figma"></i> Figma & Design Tools</li>
     </ul>
   </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="container glass-card" data-aos="fade-up">
+  <section id="certifications" class="container glass mb-5" data-aos="fade-up">
     <h2 class="section-title">Certifications</h2>
-    <ul class="icon-list">
-      <li><i class="fas fa-award"></i> CSPO®</li>
-      <li><i class="fas fa-robot"></i> AI Product Management</li>
-      <li><i class="fas fa-tags"></i> HubSpot Product Marketing</li>
-      <li><i class="fas fa-shield-alt"></i> ISC2 Cybersecurity</li>
-      <li><i class="fas fa-lightbulb"></i> Delft Design Approach</li>
+    <ul class="icon-list row">
+      <li class="col-md-4"><i class="fas fa-award"></i> CSPO®</li>
+      <li class="col-md-4"><i class="fas fa-robot"></i> AI Product Management</li>
+      <li class="col-md-4"><i class="fas fa-tags"></i> HubSpot PMM</li>
+      <li class="col-md-4"><i class="fas fa-shield-alt"></i> ISC2 Cybersecurity</li>
+      <li class="col-md-4"><i class="fas fa-lightbulb"></i> Delft Design Approach</li>
+      <li class="col-md-4"><i class="fas fa-chart-pie"></i> GrowthX GTM Strategist</li>
     </ul>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="container" data-aos="fade-up">
+  <section id="testimonials" class="container mb-5" data-aos="fade-up">
     <h2 class="section-title">Testimonials</h2>
     <div class="swiper testimonial-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">“She is a great team player...” – Prateek Gupta</div>
-        <div class="swiper-slide">“Always professional...” – Shahzar Ansari</div>
-        <!-- add remaining slides -->
+        <div class="swiper-slide">“She is a great team player and goes above beyond her role.” – Prateek Gupta</div>
+        <div class="swiper-slide">“Dedicated, hardworking, attentive – always dependable.” – Chaitanya Naik</div>
+        <!-- additional slides -->
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="container glass-card mb-5" data-aos="fade-up">
-    <h2 class="section-title">Contact Me</n2>
-    <form action="https://docs.google.com/forms/d/e/your-google-form-id/formResponse" method="POST">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" id="name" name="entry.123456" class="form-control" required>
+  <section id="contact" class="container glass mb-5" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://docs.google.com/forms/d/e/your-form-id/formResponse" method="POST">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" name="entry.123" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="entry.456" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-12">
+          <textarea name="entry.789" class="form-control" rows="4" placeholder="Message" required></textarea>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" id="email" name="entry.654321" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea id="message" name="entry.112233" class="form-control" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn btn-accent mt-3">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container text-center">
-      <p>© 2025 Prathyusha Gaddalay. All rights reserved.</p>
+      <p>© 2025 Prathyusha Gaddalay | Built with ♥ by Prathyusha</p>
     </div>
   </footer>
 
@@ -240,7 +246,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({ duration: 600, once: true });
-    new Swiper('.testimonial-slider', { loop: true, pagination: { el: '.swiper-pagination', clickable: true }, slidesPerView: 1, spaceBetween: 20, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+    new Swiper('.testimonial-slider', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      slidesPerView: 1,
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
   </script>
 </body>
 </html>
