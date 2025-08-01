@@ -5,92 +5,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prathyusha Gaddalay | Lead Product Manager Portfolio</title>
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-
-    header.hero {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    header.hero img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border: 5px solid #fff;
-    }
-
-    .section-title {
-      margin-top: 60px;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .skills-section ul,
-    .certifications-section ul,
-    .projects-section ul,
-    .content-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .skills-section li::before,
-    .certifications-section li::before,
-    .projects-section li::before,
-    .content-section li::before {
-      content: "✔ ";
-      color: #2c5364;
-    }
-
-    .card {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      margin-bottom: 20px;
-    }
-
-    footer {
-      background-color: #2c5364;
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-    }
-
-    .logo-strip {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 30px;
-    }
-
-    .logo-strip img {
-      height: 40px;
-      object-fit: contain;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; scroll-behavior: smooth; }
+    .navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav-link { color: #333 !important; }
+    .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 100px 0; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: url('assets/images/hero-bg.jpg') center/cover no-repeat; opacity: 0.2; }
+    .hero img { border-radius: 50%; width: 180px; height: 180px; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .social-icons a { color: #fff; margin: 0 .5rem; font-size: 1.2rem; }
+    .logo-strip { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; padding: 2rem 0; background: #fff; }
+    .logo-strip img { height: 50px; object-fit: contain; filter: grayscale(1); transition: filter .3s; }
+    .logo-strip img:hover { filter: none; }
+    .section-title { margin: 60px 0 30px; text-align: center; font-size: 2.5rem; font-weight: 600; }
+    .timeline { position: relative; padding: 2rem 0; }
+    .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: #2c5364; transform: translateX(-50%); }
+    .timeline-item { position: relative; width: 50%; padding: 2rem 2rem 2rem 4rem; }
+    .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+    .timeline-item:nth-child(even) { left: 50%; }
+    .timeline-item::before { content: ''; position: absolute; top: 2rem; width: 20px; height: 20px; background: #2c5364; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 4px #2c5364; }
+    .timeline-item:nth-child(odd)::before { right: -10px; }
+    .timeline-item:nth-child(even)::before { left: -10px; }
+    .project-card { position: relative; overflow: hidden; border-radius: 10px; }
+    .project-card img { width: 100%; display: block; }
+    .project-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity .3s; }
+    .project-card:hover .project-overlay { opacity: 1; }
+    footer { background: #2c5364; color: #fff; padding: 2rem 0; text-align: center; }
   </style>
 </head>
 
 <body>
-  <header class="hero">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#thought">Thought</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero d-flex flex-column justify-content-center align-items-center text-center" data-aos="fade-up">
     <img src="assets/images/profile.jpg" alt="Prathyusha Gaddalay">
-    <h1>Prathyusha Prakash Gaddalay</h1>
-    <p>Lead Product Manager | Building AI-Driven SaaS & Data Platforms | Driving Growth & Impact</p>
-    <p><strong>📞</strong> +91-8861303296 | <strong>✉️</strong> <a href="mailto:gprathyu8@gmail.com" style="color:white">gprathyu8@gmail.com</a> | <strong>🔗</strong> <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" style="color:white" target="_blank">LinkedIn</a></p>
-    <a class="btn btn-light mt-3" href="assets/files/Prathyusha_Gaddalay_Resume.pdf" download>Download Resume</a>
+    <h1 class="mt-3">Prathyusha Prakash Gaddalay</h1>
+    <p class="lead">Lead Product Manager | AI-Driven SaaS & Data Platforms | Driving Growth & Impact</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/prathyusha-gaddalay/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" download><i class="fas fa-file-download"></i></a>
+    </div>
   </header>
 
-  <div class="logo-strip">
+  <!-- Trusted Logos -->
+  <div class="logo-strip" data-aos="fade-up">
     <img src="assets/images/oracle.png" alt="Oracle">
     <img src="assets/images/sg.png" alt="Scientific Games">
     <img src="assets/images/themathco.png" alt="TheMathCompany">
@@ -98,90 +79,102 @@
     <img src="assets/images/growthx.png" alt="GrowthX">
   </div>
 
-  <section id="experience" class="container mt-5">
+  <!-- Experience Timeline -->
+  <section id="experience" class="container timeline" data-aos="fade-right">
     <h2 class="section-title">Work Experience</h2>
-    <div class="card p-4">
-      <h5>📌 Oracle – Senior Technical Product Manager</h5>
+    <div class="timeline-item">
+      <h5>Oracle – Senior Technical Product Manager</h5>
+      <small>Nov 2021 – Jun 2023</small>
       <ul>
-        <li>Owned Oracle Aconex workflows used by 5M+ global users</li>
-        <li>Reduced upload times by 50%, introduced microservices, and improved data governance</li>
-        <li>Led distributed teams across NA, EMEA, APAC</li>
+        <li>Owned Aconex workflows for 5M+ users across NA, EMEA, APAC.</li>
+        <li>Reduced upload times 50% via microservices migration and real-time tracking.</li>
       </ul>
     </div>
-    <div class="card p-4">
-      <h5>📌 TheMathCompany – Product Manager</h5>
+    <div class="timeline-item" data-aos="fade-left">
+      <h5>TheMathCompany – Product Manager</h5>
+      <small>Nov 2020 – Nov 2021</small>
       <ul>
-        <li>Led Co.dx platform for analytics (Retail, Pharma, Supply Chain)</li>
-        <li>Achieved 8% boost in lead conversions and 20% growth in market share</li>
+        <li>Led Co.dx analytics platform; boosted market share 20% and conversions 8%.</li>
       </ul>
     </div>
-    <div class="card p-4">
-      <h5>📌 Scientific Games – Product Owner</h5>
+    <div class="timeline-item">
+      <h5>Scientific Games – Product Owner</h5>
+      <small>Dec 2017 – Aug 2020</small>
       <ul>
-        <li>Launched SGHOST & Unified Wallet for cashless casino ops</li>
-        <li>Resulted in $2M revenue lift and 20% faster transactions</li>
+        <li>Launched SGHOST & Unified Wallet; delivered $2M uplift and 20% faster transactions.</li>
+      </ul>
+    </div>
+    <div class="timeline-item" data-aos="fade-left">
+      <h5>Mahindra Comviva – Sr. Business Analyst</h5>
+      <small>2013 – 2017</small>
+      <ul>
+        <li>Automated PCRF testing (200+ cases), saving 80+ hours per cycle.</li>
       </ul>
     </div>
   </section>
 
-  <section id="projects" class="projects-section container mt-5">
+  <!-- Projects -->
+  <section id="projects" class="container mt-5" data-aos="fade-up">
     <h2 class="section-title">Featured Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="project-card">
+          <img src="assets/images/credit-scoring.png" alt="Credit Scoring" />
+          <div class="project-overlay text-center p-3">
+            <h5>AI Credit Scoring</h5>
+            <p>Built prototype that improved approval accuracy by 15%.</p>
+            <a href="https://www.linkedin.com/posts/..." class="btn btn-primary btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <img src="assets/images/ai-copilot.png" alt="AI Copilot for PMs" />
+          <div class="project-overlay text-center p-3">
+            <h5>AI Copilot for PMs</h5>
+            <p>Integrated GitHub Copilot for backlog automation.</p>
+            <a href="https://www.linkedin.com/posts/..." class="btn btn-primary btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thought Leadership -->
+  <section id="thought" class="container mt-5" data-aos="fade-up">
+    <h2 class="section-title">Thought Leadership</h2>
     <ul>
-      <li><a href="https://www.linkedin.com/posts/prathyusha-gaddalay_fintech-productinnovation-creditscoring-activity-7356211674959228929-59Gw">AI-powered Credit Scoring Prototype</a></li>
-      <li><a href="https://www.linkedin.com/posts/prathyusha-gaddalay_growthx-githubcopilot-aiforpms-activity-7344005179194646528-vIBh">AI Copilot for PMs</a></li>
+      <li><a href="https://www.linkedin.com/posts/..." target="_blank">Great India AI Summit 2024 Recap</a></li>
+      <li><a href="https://www.linkedin.com/posts/..." target="_blank">FTX2025 Insights & Trends</a></li>
     </ul>
   </section>
 
-  <section id="skills" class="skills-section container mt-5">
-    <h2 class="section-title">Skills</h2>
-    <ul>
-      <li>Growth Metrics, A/B Testing, Product Analytics</li>
-      <li>API Integration, Scalable Architecture</li>
-      <li>Agile Planning, Roadmapping, Stakeholder Management</li>
-      <li>UX/UI Design, Wireframing, Figma</li>
-    </ul>
-  </section>
-
-  <section id="certifications" class="certifications-section container mt-5">
-    <h2 class="section-title">Certifications</h2>
-    <ul>
-      <li>CSPO® | AI Product Management | HubSpot Product Marketing</li>
-      <li>Delft Product Design | ISC2 Cybersecurity | GrowthX GTM</li>
-    </ul>
-  </section>
-
-  <section id="testimonials" class="container mt-5">
+  <!-- Testimonials -->
+  <section id="testimonials" class="container mt-5" data-aos="fade-up">
     <h2 class="section-title">Testimonials</h2>
     <div class="swiper testimonial-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><p>“She is a great team player and goes above and beyond her role to ensure delivery quality.”</p><span>– Prateek Gupta</span></div>
-        <div class="swiper-slide"><p>“The most meticulous person I’ve worked with. Led product from inception to release.”</p><span>– Subodh Behera</span></div>
-        <div class="swiper-slide"><p>“Excellent communicator, critical thinker, and problem solver.”</p><span>– Rishikesh Pawar</span></div>
+        <div class="swiper-slide"><p>“She is a great team player…”</p><span>– Prateek Gupta</span></div>
+        <div class="swiper-slide"><p>“The most meticulous person…”</p><span>– Subodh Behera</span></div>
+        <div class="swiper-slide"><p>“Excellent communicator…”</p><span>– Rishikesh Pawar</span></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>📍 Bengaluru, India &nbsp; | &nbsp; Built by Prathyusha Gaddalay</p>
+    <p>📍 Bengaluru, India | Built by Prathyusha Gaddalay</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    const swiper = new Swiper('.testimonial-slider', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      slidesPerView: 1,
-      spaceBetween: 20,
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }
-    });
+    AOS.init({ duration: 800, once: true });
+    new Swiper('.testimonial-slider', { loop: true, pagination: { el: '.swiper-pagination', clickable: true }, slidesPerView: 1, spaceBetween: 20, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
   </script>
 </body>
+
 </html>
