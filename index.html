@@ -1,118 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prathyusha Gaddalay | Senior Technical Product Manager</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
-    .navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .nav-link { color: #333 !important; }
-    .hero { background: #f0f4f8; color: #333; padding: 100px 0; text-align: center; }
-    .hero img { border-radius: 50%; width: 160px; height: 160px; object-fit: cover; border: 4px solid #ddd; }
-    .section-title { margin: 60px 0 30px; text-align: center; font-size: 2.2rem; font-weight: 600; }
-    .timeline::before { content: ''; position: absolute; left:50%; top:0; bottom:0; width:4px; background:#ccc; transform:translateX(-50%); }
-    .timeline-item { width:50%; padding:1rem 2rem; }
-    .timeline-item::before { content:''; position:absolute; top:1.5rem; width:20px; height:20px; background:#fff; border-radius:50%; border:4px solid #ccc; }
-    .project-card img { width:100%; border-radius: 8px; }
-    .glass-card { background: #f8f9fa; padding:2rem; border-radius:10px; margin:2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .icon-list i { color:#2c5364; margin-right:.5rem; }
-    footer { background:#f0f0f0; color:#444; padding:2rem 0; text-align:center; }
-    .btn-hire { background: #0056b3; color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; }
+    /* Based on HelloPM guide: minimalist, card-based, clear hierarchy */
+    :root { --primary: #0056b3; --secondary: #f0f4f8; --accent: #2c5364; --text: #333; }
+    body { font-family: 'Inter', sans-serif; background: var(--secondary); color: var(--text); scroll-behavior: smooth; }
+    nav { background: var(--primary); }
+    .nav-link, .navbar-brand { color: #fff !important; font-weight: 500; }
+    .hero { padding: 8rem 0 4rem; background: var(--primary); color: #fff; text-align: center; position: relative; }
+    .hero img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #fff; }
+    .metrics { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
+    .metrics div { text-align: center; }
+    .section-title { margin: 4rem 0 2rem; text-align: center; font-size: 2.25rem; color: var(--primary); }
+    .card { border: 0; border-radius: .75rem; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .card-img-top { border-top-left-radius: .75rem; border-top-right-radius: .75rem; }
+    .glass { background: #fff; padding: 2rem; border-radius: .75rem; box-shadow: 0 2px 12px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+    footer { background: var(--primary); color: #fff; padding: 2rem 0; text-align: center; }
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Prathyusha</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand" href="#home">Prathyusha Gaddalay</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <header class="hero">
-    <img src="assets/images/profile.jpg" alt="Profile">
-    <h1 class="mt-3">Prathyusha Gaddalay</h1>
-    <p>Senior Technical Product Manager | Driving Growth via AI-Driven SaaS Platforms</p>
-    <a class="btn btn-primary mt-3" href="assets/files/Prathyusha_Gaddalay_Resume.pdf" target="_blank">Download Resume</a>
-    <a class="btn btn-hire mt-3" href="https://forms.gle/YOUR_FORM_ID" target="_blank">Hire Me</a>
+
+  <!-- Hero -->
+  <header id="home" class="hero" data-aos="fade-in">
+    <div class="container">
+      <img src="assets/images/profile.jpg" alt="Profile">
+      <h1 class="mt-3">Senior Technical Product Manager</h1>
+      <p class="lead">Driving AI-driven SaaS Products & Growth Strategies</p>
+      <div class="metrics">
+        <div><h3>10+</h3><p>Years Exp.</p></div>
+        <div><h3>5M+</h3><p>Users Impacted</p></div>
+        <div><h3>20+</h3><p>Products Delivered</p></div>
+      </div>
+      <a href="#contact" class="btn btn-light btn-lg mt-3 me-2">Hire Me</a>
+      <a href="assets/files/Prathyusha_Gaddalay_Resume.pdf" class="btn btn-outline-light btn-lg mt-3" download>Resume</a>
+    </div>
   </header>
+
+  <!-- Experience -->
   <section id="experience" class="container mt-5">
-    <h2 class="section-title">Work Experience</h2>
-    <!-- Timeline content here -->
+    <h2 class="section-title">Experience</h2>
+    <div class="row g-4">
+      <!-- Oracle Card -->
+      <div class="col-md-6">
+        <div class="card glass" data-aos="fade-up">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/images/companies/oracle-logo.png" alt="Oracle" width="48" class="me-3">
+              <div>
+                <h5 class="card-title mb-0">Oracle</h5>
+                <small class="text-muted">Senior Technical PM (2021–2023)</small>
+              </div>
+            </div>
+            <ul>
+              <li>Led microservices migration & real-time tracking for 5M users</li>
+              <li>Reduced upload times by 50% and errors by 40%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- TheMathCompany Card -->
+      <div class="col-md-6">
+        <div class="card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/images/companies/TheMathCompany_Co_dx.jpg" alt="TheMathCompany" width="48" class="me-3">
+              <div>
+                <h5 class="card-title mb-0">TheMathCompany</h5>
+                <small class="text-muted">Product Manager (2020–2021)</small>
+              </div>
+            </div>
+            <ul>
+              <li>Architected Co.dx platform; boosted market share by 20%</li>
+              <li>Increased lead conversions by 8%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Projects -->
   <section id="projects" class="container mt-5">
     <h2 class="section-title">Projects & Case Studies</h2>
-    <!-- Project Cards -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card" data-aos="zoom-in">
+          <img src="assets/images/projects/credit-scoring.png" class="card-img-top" alt="Credit Scoring">
+          <div class="card-body">
+            <h5 class="card-title">AI Credit Scoring</h5>
+            <p class="card-text">Improved approval accuracy by 15% through ML models.</p>
+            <a href="#" class="btn btn-primary">View Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/images/projects/ai-copilot.png" class="card-img-top" alt="AI Copilot">
+          <div class="card-body">
+            <h5 class="card-title">AI Copilot for PMs</h5>
+            <p class="card-text">Automated backlog management via GitHub Actions.</p>
+            <a href="#" class="btn btn-primary">View Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/images/projects/growthx-acquisition.png" class="card-img-top" alt="GrowthX">
+          <div class="card-body">
+            <h5 class="card-title">GrowthX Strategy</h5>
+            <p class="card-text">Acquisition, Engagement & Monetization playbook.</p>
+            <a href="#" class="btn btn-primary">View Case</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="articles" class="container mt-5">
-    <h2 class="section-title">Content & Writing</h2>
-    <ul>
-      <li><a href="https://www.linkedin.com/posts/...2zWg">Great India AI Summit Recap</a></li>
-      <li><a href="https://www.linkedin.com/posts/...K2_d">FTX25 & Razorpay Thoughts</a></li>
+
+  <!-- Articles -->
+  <section id="articles" class="container mt-5 glass" data-aos="fade-up">
+    <h2 class="section-title">Thought Leadership</n2>
+    <ul class="list-unstyled">
+      <li><i class="fas fa-feather-alt"></i> <a href="https://www.linkedin.com/posts/...2zWg">Great India AI Summit Recap</a></li>
+      <li><i class="fas fa-feather-alt"></i> <a href="https://www.linkedin.com/posts/...K2_d">FTX25 & Razorpay Insights</a></li>
     </ul>
   </section>
-  <section id="skills" class="container mt-5">
-    <h2 class="section-title">Skills</h2>
-    <ul class="icon-list">
-      <li><i class="fas fa-chart-line"></i> Product Strategy</li>
-      <li><i class="fas fa-code"></i> APIs, Microservices</li>
-      <li><i class="fas fa-chart-pie"></i> GTM, Monetization</li>
-    </ul>
+
+  <!-- Skills -->
+  <section id="skills" class="container mt-5" data-aos="fade-up">
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="row">  
+      <div class="col-md-4 mb-3"><i class="fas fa-chart-line me-2 text-primary"></i>Product Strategy</div>
+      <div class="col-md-4 mb-3"><i class="fas fa-cogs me-2 text-primary"></i>API & Architecture</div>
+      <div class="col-md=4 mb-3"><i class="fas fa-chart-pie me-2 text-primary"></i>GTM & Monetization</div>
+      <div class="col-md-4 mb-3"><i class="fas fa-flask me-2 text-primary"></i>A/B Testing</div>
+      <div class="col-md-4 mb-3"><i class="fas fa-pencil-ruler me-2 text-primary"></i>UX/UI Design</div>
+      <div class="col-md-4 mb-3"><i class="fab fa-figma me-2 text-primary"></i>Figma</div>
+    </div>
   </section>
-  <section id="certifications" class="container mt-5">
-    <h2 class="section-title">Certifications</h2>
-    <ul>
-      <li>CSPO®</li>
-      <li>AI Product Management</li>
-      <li>GrowthX GTM Strategist</li>
-    </ul>
-  </section>
-  <section id="testimonials" class="container mt-5">
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container mt-5" data-aos="fade-up">
     <h2 class="section-title">Testimonials</h2>
     <div class="swiper testimonial-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">“She’s a phenomenal PM...” – Rishikesh Pawar</div>
-        <div class="swiper-slide">“Great communicator and team player...” – Subodh Behera</div>
+        <div class="swiper-slide glass p-4">“She’s a phenomenal PM who drives impact end-to-end.”<br><small>– Rishikesh Pawar, PMTS, Oracle</small></div>
+        <div class="swiper-slide glass p-4" data-aos-delay="100">“Most meticulous leader I've worked with.”<br><small>– Subodh Behera, Sr. PM, Scientific Games</small></div>
+        <!-- Add more slides -->
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination mt-3"></div>
     </div>
   </section>
-  <section id="contact" class="container mt-5">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: <a href="mailto:gprathyu8@gmail.com">gprathyu8@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/prathyusha-gaddalay/">prathyusha-gaddalay</a></p>
+
+  <!-- Contact -->
+  <section id="contact" class="container mt-5 glass p-4" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST">
+      <div class="row g-3">
+        <div class="col-md-6"><input name="entry.1" type="text" class="form-control" placeholder="Name" required></div>
+        <div class="col-md-6"><input name="entry.2" type="email" class="form-control" placeholder="Email" required></div>
+        <div class="col-12"><textarea name="entry.3" class="form-control" rows="4" placeholder="Message" required></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+    </form>
   </section>
+
   <footer>
-    <p>© 2025 Prathyusha Gaddalay. All rights reserved.</p>
+    <p>© 2025 Prathyusha Gaddalay. Crafted with care.</p>
   </footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init({ duration: 700, once: true });
     new Swiper('.testimonial-slider', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
+      pagination: { el: '.swiper-pagination', clickable: true },
       slidesPerView: 1,
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
+      spaceBetween: 20,
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
   </script>
 </body>
